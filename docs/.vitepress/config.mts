@@ -45,8 +45,14 @@ export default defineConfig({
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: '首页', link: '/' },
-      { text: '关于作者', link: 'https://github.com/PuppetRuler' }
+      { text: '前端', link: '/Front_End/index.md' },
+      { text: 'Modern Design', link: '/Modern_Design/index.md' },
+      { text: 'Android', link: '/Android/index.md' },
+      { text: 'HarmonyOS', link: '/HarmonyOS/index.md' },
+      { text: '逆向学习', link: '/Reverse/index.md' },
+      { text: 'Java笔记', link: '/Java/index.md' },
+      { text: '工具使用篇', link: '/Tools/index.md' },
+      { text: '杂谈', link: '/Chats/index.md' },
     ],
     socialLinks: [
       {

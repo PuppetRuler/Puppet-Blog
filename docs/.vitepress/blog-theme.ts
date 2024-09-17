@@ -51,7 +51,7 @@ const blogTheme = getThemeConfig({
   themeColor: 'el-blue',
 
   // 文章默认作者
-  author: 'puppetRuler',
+  // author: 'puppetRuler',
 
   // 友链
   friend: [
@@ -142,6 +142,14 @@ const blogTheme = getThemeConfig({
     //   lastUpdated: 'Last updated on',
     //   tag: 'Tags',
     // }
+  },
+  // 评论区设置
+  comment: {
+    repo: 'PuppetRuler/Puppet-Blog',
+    repoId: 'R_kgDOMy-QGQ',
+    category: 'Announcements',
+    categoryId: 'DIC_kwDOMy-QGc4CijGz',
+    inputPosition: 'bottom',
   }
 })
 

@@ -3,11 +3,13 @@
   background: radial-gradient(ellipse,
       rgba(var(--bg-gradient-home), 1) 0%,
       rgba(var(--bg-gradient-home), 0) 150%);
-
+  
   // 自定义首页背景图
   &::before {
-    // 图片来源：https://zhuanlan.zhihu.com/p/54060187
-    background-image: url(./assets/bg.webp);
+    background-image: url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724778729498large_Haru_03b.png");
     background-size: cover;
   }
+}
+code {
+  font-family: 'Menlo', 'Monaco', 'Ubuntu Mono';
 }
