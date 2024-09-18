@@ -7,7 +7,7 @@
       rgba(var(--bg-gradient-home), 0) 150%);
 
   // 电脑
-  @media screen and (min-width:700px) {
+  @media screen and (min-width:768px) {
     // 自定义首页背景图
     &::before {
       background-image: url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg");
@@ -16,7 +16,7 @@
   }
 
   // 手机
-  @media screen and (max-width:700px) {
+  @media screen and (max-width:768px) {
     // 自定义首页背景图
     &::before {
       background-image: url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1726620907142bg.jpg");

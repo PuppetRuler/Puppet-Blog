@@ -92,91 +92,87 @@ const style = `
 }
 `;
 
-// 添加样式到文档
-const styleElement = document.createElement('style');
-styleElement.textContent = style;
-document.head.appendChild(styleElement);
+
 
 // 添加 HTML 结构
 const menuHTML = `
 <section class="darkmenu">
     <ul class="dark-menu-list">
         <li>
-            <i class="iconfont icon-fuzhi"></i>
-            <span class="menu-copy" onclick="copy()">Copy</span>
-        </li>
-        <li>
-            <i class="iconfont icon-niantie"></i>
-            <span class="menu-paste" onclick="paste()">Paste</span>
-        </li>
-        <li>
-            <i class="iconfont icon-jianqie"></i>
-            <span class="menu-cut">Cut</span>
-        </li>
-        <li>
-            <i class="iconfont icon-xiazaidaoru"></i>
-            <span class="menu-download">Download</span>
+            <span class="menu-copy" onclick="copy()">复制内容</span>
         </li>
         <li class="divider"></li>
         <li>
-            <i class="iconfont icon-shanchu"></i>
-            <span class="menu-delete">Delete</span>
+            <span class="menu-paste">???</span>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <span class="menu-cut">???</span>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <span class="menu-download">???</span>
+        </li>
+        <li class="divider"></li>
+        <li>
+            <span class="menu-delete">???</span>
         </li>
     </ul>
 </section>
 `;
 
-const container = document.createElement('div');
-container.innerHTML = menuHTML;
-console.log("@@@@@@@@@@@",doc.body)
-doc.body.appendChild(container.firstElementChild);
 
-const darkmenu = doc.querySelector('.darkmenu');
-const darkMenuList = doc.querySelector('.dark-menu-list');
-const darkMenuItemList = doc.querySelectorAll('.dark-menu-list li');
+const isMobile = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-// 监听右击事件
-doc.body.addEventListener('contextmenu', (e) => {
-  darkmenu.style.display = "block";
-  e.preventDefault();
+// 电脑端代码
+if (!isMobile) {
+  // 添加样式到文档
+  const styleElement = document.createElement('style');
+  styleElement.textContent = style;
+  document.head.appendChild(styleElement);
 
-  const { clientX, clientY } = e;
+  // 添加HTML到文档
+  const container = document.createElement('div');
+  container.innerHTML = menuHTML;
+  doc.body.appendChild(container.firstElementChild);
 
-  darkMenuList.setAttribute('style', `--width: ${darkMenuList.scrollWidth}; --height: ${darkMenuList.scrollHeight}`);
-  darkMenuList.style.top = clientY + 'px';
-  darkMenuList.style.left = clientX + 'px';
+  const darkmenu = doc.querySelector('.darkmenu');
+  const darkMenuList = doc.querySelector('.dark-menu-list');
+  const darkMenuItemList = doc.querySelectorAll('.dark-menu-list li');
 
-  darkMenuList.classList.add('menu-show');
-  darkMenuItemList.forEach(li => {
-    li.classList.add('menu-item-show');
+  // 监听右击事件
+  doc.body.addEventListener('contextmenu', (e) => {
+    darkmenu.style.display = "block";
+    e.preventDefault();
+
+    const { clientX, clientY } = e;
+
+    darkMenuList.setAttribute('style', `--width: ${darkMenuList.scrollWidth}; --height: ${darkMenuList.scrollHeight}`);
+    darkMenuList.style.top = clientY + 'px';
+    darkMenuList.style.left = clientX + 'px';
+
+    darkMenuList.classList.add('menu-show');
+    darkMenuItemList.forEach(li => {
+      li.classList.add('menu-item-show');
+    });
   });
-});
+
+  // 点击其他区域关闭菜单
+  doc.addEventListener('click', (e) => {
+    darkMenuList.classList.remove('menu-show');
+    darkMenuItemList.forEach(li => {
+      li.classList.remove('menu-item-show');
+    });
+    darkmenu.style.display = "none";
+  });
+}
 
 // 复制功能
-async function copy() {
-  var textToCopy = window.getSelection()
-    try {
-        await navigator.clipboard.writeText(textToCopy);
-    } catch (err) {
-        console.error('Failed to copy: ', err);
-    }
-}
-
-// 粘贴功能
-async function paste() {
+const copy = async () => {
+  var textToCopy = window.getSelection();
   try {
-    const text = await navigator.clipboard.readText();
-    document.getElementById('inputField').value = text;
+    await navigator.clipboard.writeText(textToCopy);
   } catch (err) {
-    console.error('Failed to read clipboard contents: ', err);
+    console.error('Failed to copy: ', err);
   }
-}
-
-// 点击其他区域关闭菜单
-doc.addEventListener('click', (e) => {
-  darkMenuList.classList.remove('menu-show');
-  darkMenuItemList.forEach(li => {
-    li.classList.remove('menu-item-show');
-  });
-  darkmenu.style.display = "none";
-});
+};
