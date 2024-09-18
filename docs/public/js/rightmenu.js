@@ -154,17 +154,12 @@ doc.body.addEventListener('contextmenu', (e) => {
 
 // 复制功能
 async function copy() {
-  const selectedText = window.getSelection().toString();
-  if (selectedText) {
+  var textToCopy = window.getSelection()
     try {
-      await navigator.clipboard.writeText(selectedText);
-      alert('复制成功');
+        await navigator.clipboard.writeText(textToCopy);
     } catch (err) {
-      console.error('Failed to copy text: ', err);
+        console.error('Failed to copy: ', err);
     }
-  } else {
-    alert('No text selected');
-  }
 }
 
 // 粘贴功能
