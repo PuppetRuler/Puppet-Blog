@@ -26,7 +26,7 @@ export default defineConfig({
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['script', { src: '/js/title.js' }],
-    ['script', { src: '/js/rightmenu.js' }]
+    ['script', { src: '/js/rightmenu.js', defer:'true'}]
   ],
   themeConfig: {
     // 展示 2,3 级标题在目录中
