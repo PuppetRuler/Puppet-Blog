@@ -128,6 +128,7 @@ const menuHTML = `
 
 const container = document.createElement('div');
 container.innerHTML = menuHTML;
+console.log("@@@@@@@@@@@",doc.body)
 doc.body.appendChild(container.firstElementChild);
 
 const darkmenu = doc.querySelector('.darkmenu');
