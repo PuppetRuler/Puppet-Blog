@@ -73,7 +73,7 @@ Node.js 中创建 Buffer 的方式主要如下几种：
    let buf_4 = Buffer.from([105, 108, 111, 118, 101, 121, 111, 117]);
    ```
 
-#### [3-2 Buffer 与字符串的转化](代码/01_buffer/2-操作buffer.js)
+#### 3-2 Buffer 与字符串的转化
 
 我们可以借助 `toString` 方法将 Buffer 转为字符串
 
@@ -685,14 +685,13 @@ HTTP（hypertext transport protocol）协议；中文叫**超文本传输协议*
 ### 6.响应报文的组成
 
 - 响应行
-  ![1683337055194](D:\Puppet@Blog\docs\Front_End\Node.assets\1683337055194.png)
-
+  
   > HTTP/1.1：HTTP协议版本号
-
+  
   - 200：响应状态码 404 Not Found 500 Internal Server Error
-
+  
   - 还有一些状态码，参考：https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Status
-
+  
     | 状态码 | 含义           |
     | ------ | -------------- |
     | 1xx    | 信息响应       |
@@ -700,11 +699,11 @@ HTTP（hypertext transport protocol）协议；中文叫**超文本传输协议*
     | 3xx    | 重定向消息     |
     | 4xx    | 客户端错误响应 |
     | 5xx    | 服务端错误响应 |
-
+  
   - OK：响应状态描述
-
+  
   > 响应状态码和响应字符串关系是一一对应的。
-
+  
 - 响应头
 
   ```
