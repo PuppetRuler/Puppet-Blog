@@ -33,8 +33,10 @@ pre {
 }
 
 @media screen and (min-width:768px) {
-  html,
-  a:hover {
-    cursor: url("./assets/browserPointer.cur"), pointer !important;
+  html {
+    cursor: url("./assets/browserPointer.cur"), pointer;
   }
+  .blog-item a:hover {
+    cursor: url("./assets/browserPointer.cur"), pointer !important;
+}
 }
