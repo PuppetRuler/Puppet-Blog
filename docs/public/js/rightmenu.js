@@ -175,7 +175,11 @@ const images = [
   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1727145787406bg_p0.jpg")',
   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787637521%E3%82%A2%E3%82%A4_%E5%A4%A2%E3%81%AE%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%AB%EF%BC%88%E6%B5%81%E8%8A%B1%E3%83%BB%E3%82%82%E3%82%82%EF%BC%89_01.jpg")',
   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724780599506large_eva04_a.jpg")',
-  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724778936500large_Ren_01d.png")'
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724778936500large_Ren_01d.png")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724779116501large_Syugou_01a.png")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724778729498large_Haru_03b.png")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724780878506large_evc05_a.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1726620907142bg.jpg")'
 ];
 
 let currentIndex = 0;
