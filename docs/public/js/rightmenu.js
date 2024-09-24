@@ -180,9 +180,11 @@ const images = [
 
 let currentIndex = 0;
 
+// 更换背景图
 function changeBackground() {
   const vpHome = document.querySelector('.VPHome');
-
-  vpHome.style.setProperty('--bg-image', images[currentIndex]);
-  currentIndex = (currentIndex + 1) % images.length; // 循环索引
+  if (vpHome) {
+    vpHome.style.setProperty('--bg-image', images[currentIndex]);
+    currentIndex = (currentIndex + 1) % images.length; // 循环索引
+  }
 }
