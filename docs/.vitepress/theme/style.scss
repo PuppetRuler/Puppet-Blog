@@ -12,6 +12,9 @@
     &::before {
       background-image: url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg");
       background-size: cover;
+      // 背景图切换(概率性失败)
+      // background-image: var(--bg-image, url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg")); /* 设置初始图片 */
+      // transition: background-image 0.6s;
     }
   }
 

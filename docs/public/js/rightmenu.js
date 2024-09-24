@@ -103,21 +103,12 @@ const menuHTML = `
         </li>
         <li class="divider"></li>
         <li>
-            <span class="menu-paste">???</span>
+            <span class="change-background" onclick="changeBackground()">切换背景图</span>
         </li>
         <li class="divider"></li>
         <li>
             <span class="menu-cut">???</span>
         </li>
-        <li class="divider"></li>
-        <li>
-            <span class="menu-download">???</span>
-        </li>
-        <li class="divider"></li>
-        <li>
-            <span class="menu-delete">???</span>
-        </li>
-    </ul>
 </section>
 `;
 
@@ -176,3 +167,21 @@ const copy = async () => {
     console.error('Failed to copy: ', err);
   }
 };
+
+// const images = [
+//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787476187アイ_(あなた)とわたし_01.jpg")',
+//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787392341%E3%81%9D%E3%81%AE%E4%BB%96_%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E8%A3%8F_01.jpg")',
+//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787326109%E3%81%9D%E3%81%AE%E4%BB%96_%E3%82%AD%E3%83%A3%E3%83%A9%E7%B4%B9%E4%BB%8B%EF%BC%9A%E3%83%9F%E3%83%AA%E3%83%A3_01.jpg")',
+//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg")'
+// ];
+
+// let currentIndex = 0;
+
+// function changeBackground() {
+//   console.log("切换成功")
+//   const vpHome = document.querySelector('.VPHome');
+
+//   vpHome.style.setProperty('--bg-image', images[currentIndex]);
+//   currentIndex = (currentIndex + 1) % images.length; // 循环索引
+//   console.log(currentIndex)
+// }
