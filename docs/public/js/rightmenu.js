@@ -103,7 +103,7 @@ const menuHTML = `
         </li>
         <li class="divider"></li>
         <li>
-            <span class="change-background" onclick="changeBackground()">切换背景图</span>
+            <span class="change-background">切换背景图</span>
         </li>
         <li class="divider"></li>
         <li>
