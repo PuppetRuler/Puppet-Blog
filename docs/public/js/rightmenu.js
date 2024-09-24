@@ -98,11 +98,11 @@ const style = `
 const menuHTML = `
 <section class="darkmenu">
     <ul class="dark-menu-list">
-        <li>
-            <span class="menu-copy" onclick="copy()">复制内容</span>
+        <li onclick="copy()">
+            <span class="menu-copy">复制内容</span>
         </li>
         <li class="divider"></li>
-        <li>
+        <li onclick="changeBackground()">
             <span class="change-background">切换背景图</span>
         </li>
         <li class="divider"></li>
@@ -168,20 +168,21 @@ const copy = async () => {
   }
 };
 
-// const images = [
-//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787476187アイ_(あなた)とわたし_01.jpg")',
-//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787392341%E3%81%9D%E3%81%AE%E4%BB%96_%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E8%A3%8F_01.jpg")',
-//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787326109%E3%81%9D%E3%81%AE%E4%BB%96_%E3%82%AD%E3%83%A3%E3%83%A9%E7%B4%B9%E4%BB%8B%EF%BC%9A%E3%83%9F%E3%83%AA%E3%83%A3_01.jpg")',
-//   'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg")'
-// ];
+const images = [
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724780835507large_evb08_a.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787392341%E3%81%9D%E3%81%AE%E4%BB%96_%E3%83%A1%E3%82%A4%E3%83%B3%E3%83%93%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E8%A3%8F_01.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787326109%E3%81%9D%E3%81%AE%E4%BB%96_%E3%82%AD%E3%83%A3%E3%83%A9%E7%B4%B9%E4%BB%8B%EF%BC%9A%E3%83%9F%E3%83%AA%E3%83%A3_01.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1727145787406bg_p0.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724787637521%E3%82%A2%E3%82%A4_%E5%A4%A2%E3%81%AE%E7%B5%82%E3%82%8F%E3%82%8A%E3%81%AB%EF%BC%88%E6%B5%81%E8%8A%B1%E3%83%BB%E3%82%82%E3%82%82%EF%BC%89_01.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724780599506large_eva04_a.jpg")',
+  'url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1724778936500large_Ren_01d.png")'
+];
 
-// let currentIndex = 0;
+let currentIndex = 0;
 
-// function changeBackground() {
-//   console.log("切换成功")
-//   const vpHome = document.querySelector('.VPHome');
+function changeBackground() {
+  const vpHome = document.querySelector('.VPHome');
 
-//   vpHome.style.setProperty('--bg-image', images[currentIndex]);
-//   currentIndex = (currentIndex + 1) % images.length; // 循环索引
-//   console.log(currentIndex)
-// }
+  vpHome.style.setProperty('--bg-image', images[currentIndex]);
+  currentIndex = (currentIndex + 1) % images.length; // 循环索引
+}

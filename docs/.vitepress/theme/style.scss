@@ -10,11 +10,10 @@
   @media screen and (min-width:768px) {
     // 自定义首页背景图
     &::before {
-      background-image: url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg");
+      // 背景图切换
+      background-image: var(--bg-image, url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1727145787406bg_p0.jpg")); /* 设置初始图片 */
+      transition: background-image 0.6s;
       background-size: cover;
-      // 背景图切换(概率性失败)
-      // background-image: var(--bg-image, url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/172662318064243727380_p0.jpg")); /* 设置初始图片 */
-      // transition: background-image 0.6s;
     }
   }
 
