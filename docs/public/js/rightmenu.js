@@ -106,8 +106,8 @@ const menuHTML = `
             <span class="change-background">切换背景图</span>
         </li>
         <li class="divider"></li>
-        <li>
-            <span class="menu-cut">???</span>
+        <li onclick="copyAddress()">
+            <span class="copy-address">复制本页地址</span>
         </li>
 </section>
 `;
@@ -191,3 +191,11 @@ function changeBackground() {
     currentIndex = (currentIndex + 1) % images.length; // 循环索引
   }
 }
+
+const copyAddress = async () => {
+  try {
+    await navigator.clipboard.writeText(window.location.href);
+  } catch (err) {
+    console.error('Failed to copy: ', err);
+  }
+};
