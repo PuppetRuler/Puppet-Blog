@@ -1,6 +1,12 @@
 ---
 title: Ajax笔记
 description: Ajax的笔记
+prev:
+  text: 'Webpack'
+  link: '/Front_End/Notes/Webpack'
+next:
+  text: 'Promise'
+  link: '/Front_End/Notes/Promise'
 tags:
   - Ajax
   - 前端

@@ -1,6 +1,9 @@
 ---
 title: HTML5基础笔记
 description: 记录了HTML5的常用标签与常用属性
+next:
+  text: 'CSS'
+  link: '/Front_End/Notes/CSS3'
 tags: 
   - 前端
   - 笔记

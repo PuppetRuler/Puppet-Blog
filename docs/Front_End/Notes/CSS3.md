@@ -1,6 +1,12 @@
 ---
 title: CSS3笔记
 description: CSS2与CSS3的基础笔记
+prev:
+  text: 'HTML5'
+  link: '/Front_End/Notes/HTML5'
+next:
+  text: 'JavaScript'
+  link: '/Front_End/Notes/JavaScript'
 tags:
   - 前端
   - CSS

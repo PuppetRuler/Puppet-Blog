@@ -1,6 +1,12 @@
 ---
 title: 手撕Axios
 description: 实现一个自定义的Axios
+prev:
+  text: 'Promise'
+  link: '/Front_End/Notes/Promise'
+next:
+  text: 'TypeScript'
+  link: '/Front_End/Notes/TypeScript'
 tags:
   - Axios
   - 前端

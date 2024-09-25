@@ -13,6 +13,7 @@ import { blogTheme } from './blog-theme'
 // Vitepress 默认配置
 // 详见文档：https://vitepress.dev/reference/site-config
 export default defineConfig({
+  cleanUrls: true,
   // 继承博客主题(@sugarat/theme)
   extends: blogTheme,
   // base,
@@ -26,8 +27,8 @@ export default defineConfig({
     // ['link', { rel: 'icon', href: `${base}favicon.ico` }], // 修改了 base 这里也需要同步修改
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['script', { src: '/js/title.js' }],
-    ['script', { src: '/js/rightmenu.js', defer:'true'}],
-    ['script', { src: '/js/oml2d-canvas.js', defer:'true'}]
+    ['script', { src: '/js/rightmenu.js', defer: 'true' }],
+    ['script', { src: '/js/oml2d-canvas.js', defer: 'true' }]
   ],
   themeConfig: {
     // 展示 2,3 级标题在目录中
@@ -48,7 +49,14 @@ export default defineConfig({
     //   text: '去 GitHub 上编辑内容'
     // },
     nav: [
-      { text: '前端', link: '/Front_End/index.md' },
+      {
+        text: '前端',
+        items: [
+          {text: '笔记', link: '/Front_End/Notes/index.md'},
+          {text: '踩坑日常', link: '/Front_End/Mistakes/index.md'},
+          {text: '奇技淫巧', link: '/Front_End/Skills/index.md'}
+        ]
+      },
       { text: 'Modern Design', link: '/Modern_Design/index.md' },
       { text: 'Android', link: '/Android/index.md' },
       { text: 'HarmonyOS', link: '/HarmonyOS/index.md' },

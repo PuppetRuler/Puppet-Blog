@@ -1,6 +1,12 @@
 ---
 title: Node笔记
 description: 详细记录了Node的使用（含Express框架）
+prev:
+  text: 'JavaScript'
+  link: '/Front_End/Notes/JavaScript'
+next:
+  text: 'Webpack'
+  link: '/Front_End/Notes/Webpack'
 tags:
   - 前端
   - Node

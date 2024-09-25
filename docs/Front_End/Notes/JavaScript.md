@@ -1,6 +1,12 @@
 ---
 title: JS的重点梳理(简略)
 description: 一点小小的对基础的回顾
+prev:
+  text: 'Node'
+  link: '/Front_End/Notes/Node'
+next:
+  text: 'CSS'
+  link: '/Front_End/Notes/CSS3'
 tags:
   - 前端
   - JavaScript

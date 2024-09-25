@@ -1,6 +1,12 @@
 ---
 title: Webpack基础配置
 description: 翻出几个成旧的配置表,开始玄学做法...
+prev:
+  text: 'Node'
+  link: '/Front_End/Notes/Node'
+next:
+  text: 'Ajax'
+  link: '/Front_End/Notes/Ajax'
 tags:
   - Webpack
   - 前端

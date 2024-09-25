@@ -1,6 +1,12 @@
 ---
 title: 手撕Promise
 description: Promise自定义实现
+prev:
+  text: 'Ajax'
+  link: '/Front_End/Notes/Ajax'
+next:
+  text: 'Axios'
+  link: '/Front_End/Notes/Axios'
 tags:
   - 前端
   - Promise
