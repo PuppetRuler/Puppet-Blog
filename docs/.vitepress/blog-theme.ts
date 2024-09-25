@@ -4,7 +4,7 @@ import { getThemeConfig } from '@sugarat/theme/node'
 // 开启RSS支持（RSS配置）
 // import type { Theme } from '@sugarat/theme'
 
-// const baseUrl = 'https://sugarat.top'
+// const baseUrl = 'https://puppeteerblog.vercel.app/'
 // const RSS: Theme.RSSOptions = {
 //   title: '粥里有勺糖',
 //   baseUrl,
@@ -111,7 +111,7 @@ const blogTheme = getThemeConfig({
     mobileDisplay: true,
     models: [
       {
-        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/Senko_Normals/senko.model3.json'
+        path: 'https://registry.npmmirror.com/oml2d-models/latest/files/models/Senko_Normals/senko.model3.json',
       }
     ]
   },
