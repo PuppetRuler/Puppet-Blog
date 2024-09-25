@@ -190,7 +190,6 @@ function changeBackground() {
     vpHome = document.querySelector('.VPHome');
     vpHome.style.setProperty('--bg-image', images[currentIndex]);
     currentIndex = (currentIndex + 1) % images.length; // 循环索引
-    console.log(getComputedStyle(vpHome).getPropertyValue('--bg-image'),'应该是:',images[currentIndex]);
   }
 }
 
