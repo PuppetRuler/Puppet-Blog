@@ -182,7 +182,7 @@ const images = [
 ];
 
 let currentIndex = 0;
-let vpHome;
+let vpHome = document.querySelector('.VPHome');
 
 // 更换背景图
 function changeBackground() {
