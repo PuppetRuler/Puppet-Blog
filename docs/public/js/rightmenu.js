@@ -182,12 +182,12 @@ const images = [
 ];
 
 let currentIndex = 0;
-let vpHome = document.querySelector('.VPHome');
+let vpHome;
 
 // 更换背景图
 function changeBackground() {
+  vpHome = document.querySelector('.VPHome');
   if (vpHome) {
-    vpHome = document.querySelector('.VPHome');
     vpHome.style.setProperty('--bg-image', images[currentIndex]);
     currentIndex = (currentIndex + 1) % images.length; // 循环索引
   }
