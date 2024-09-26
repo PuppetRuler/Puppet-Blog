@@ -71,6 +71,7 @@ const observer = new MutationObserver(() => {
       document.querySelector('.VPLocalNav').classList.add('Doc_Transform');
       document.querySelector('.VPContent').classList.add('Doc_Transform');
       document.querySelector('.VPDoc').classList.add('Doc_Transform');
+      document.querySelector('.VPNavBarTitle').classList.add('Doc_Transform');
       if (document.querySelector('#closeButton')) {
         document.querySelector('#closeButton').style.zIndex = '0';
       }

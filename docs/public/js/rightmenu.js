@@ -130,9 +130,11 @@ if (!isMobile) {
   const darkmenu = doc.querySelector('.darkmenu');
   const darkMenuList = doc.querySelector('.dark-menu-list');
   const darkMenuItemList = doc.querySelectorAll('.dark-menu-list li');
+  darkmenu.style.opacity = '0';
 
   // 监听右击事件
   doc.body.addEventListener('contextmenu', (e) => {
+    darkmenu.style.opacity = '1';
     darkmenu.style.display = "block";
     e.preventDefault();
 
