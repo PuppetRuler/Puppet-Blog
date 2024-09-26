@@ -28,7 +28,7 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['script', { src: '/js/title.js' }],
     ['script', { src: '/js/rightmenu.js', defer: 'true' }],
-    ['script', { src: '/js/oml2d-canvas.js', defer: 'true' }]
+    ['script', { src: '/js/cancel-canvas.js', defer: 'true' }]
   ],
   themeConfig: {
     // 展示 2,3 级标题在目录中
