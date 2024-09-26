@@ -1797,7 +1797,7 @@ app.get("/response", (req, res) => {
     //连贯操作
     res.status(404).set('xxx', 'yyy').send('你好朋友')
     //3. 其他响应
-    res.redirect('http://atguigu.com')//重定向
+    res.redirect('http://puppet.com')//重定向
     res.download('./package.json');//下载响应
     res.json();//响应 JSON
     res.sendFile(__dirname + '/home.html') //响应文件内容
@@ -2213,7 +2213,7 @@ const app = express();
 //3. 设置 session 的中间件
 app.use(session({
     name: 'sid', //设置cookie的name，默认值是：connect.sid
-    secret: 'atguigu', //参与加密的字符串（又称签名）
+    secret: 'puppet', //参与加密的字符串（又称签名）
     saveUninitialized: false, //是否为每次请求都设置一个cookie用来存储session的id
     resave: true, //是否在每次请求时重新保存session
     store: MongoStore.create({
@@ -2313,11 +2313,11 @@ const jwt = require('jsonwebtoken');
 // jwt.sign(数据, 加密字符串, 配置对象)
 let token = jwt.sign({
     username: 'zhangsan'
-}, 'atguigu', {
+}, 'puppet', {
     expiresIn: 60 //单位是 秒
 });
 //解析 token
-jwt.verify(token, 'atguigu', (err, data) => {
+jwt.verify(token, 'puppet', (err, data) => {
     if (err) {
         console.log('校验失败~~');
         return

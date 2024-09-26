@@ -52,9 +52,6 @@ canvas#universe {
   /* 确保鼠标事件可以穿透canvas，作用于下方元素 */
 }
 // 确保galaxy-canvas生效
-.VPNav{
-  // z-index: 2 !important;
-}
 .content-wrapper{
   position: relative;
   z-index: 1;
