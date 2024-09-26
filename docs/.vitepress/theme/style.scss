@@ -52,7 +52,53 @@ canvas#universe {
   /* 确保鼠标事件可以穿透canvas，作用于下方元素 */
 }
 // 确保galaxy-canvas生效
-.content-wrapper{
+.content-wrapper {
   position: relative;
   z-index: 1;
+}
+
+
+.fade-out {
+  transform: translateX(-6.1%);
+  /* 向左移动一点 */
+  transition: 0.5s ease-in-out;
+}
+.fade-in {
+  transform: translateX(5.4%);
+  /* 向右移动一点 */
+  transition: 0.5s ease-in-out;
+}
+.VPLocalNav,.VPContent,.VPDoc {
+  transition: 0.5s ease-in-out;
+}
+
+@font-face {
+  font-family: "iconfont";
+  /* Project id 4697000 */
+  src: url('//at.alicdn.com/t/c/font_4697000_a83v3rg20z.woff2?t=1727350974406') format('woff2'),
+    url('//at.alicdn.com/t/c/font_4697000_a83v3rg20z.woff?t=1727350974406') format('woff'),
+    url('//at.alicdn.com/t/c/font_4697000_a83v3rg20z.ttf?t=1727350974406') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 18px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-yueduye-mulu:before {
+  content: "\e61c";
+}
+
+#closeButton {
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  border-radius: 50%;
+  color: var(--vp-c-brand-1);
+  &:hover{
+    cursor: pointer;
+  }
 }

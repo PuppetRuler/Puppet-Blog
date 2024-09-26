@@ -28,8 +28,16 @@ export default defineConfig({
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['script', { src: '/js/title.js' }],
     ['script', { src: '/js/rightmenu.js', defer: 'true' }],
-    ['script', { src: '/js/cancel-canvas.js', defer: 'true' }]
+    ['script', { src: '/js/cancel-canvas.js', defer: 'true' }],
+    ['script', { src: '/js/removeAside.js', defer: 'true' }]
   ],
+  // markdown配置
+  markdown: {
+    math: true,
+    image: {
+      lazyLoading: true
+    },
+  },
   themeConfig: {
     // 展示 2,3 级标题在目录中
     outline: {
@@ -52,9 +60,9 @@ export default defineConfig({
       {
         text: '前端',
         items: [
-          {text: '笔记', link: '/Front_End/Notes/index.md'},
-          {text: '踩坑日常', link: '/Front_End/Mistakes/index.md'},
-          {text: '奇技淫巧', link: '/Front_End/Skills/index.md'}
+          { text: '笔记', link: '/Front_End/Notes/index.md' },
+          { text: '踩坑日常', link: '/Front_End/Mistakes/index.md' },
+          { text: '奇技淫巧', link: '/Front_End/Skills/index.md' }
         ]
       },
       { text: 'Modern Design', link: '/Modern_Design/index.md' },

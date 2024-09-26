@@ -1,7 +1,6 @@
 let stage;
 const galaxy = document.createElement('canvas');
 galaxy.id = "universe";
-let homePage;
 function dark() {
   window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
   var n, e, i, h, t = .05,
@@ -63,17 +62,27 @@ function dark() {
 }
 const observer = new MutationObserver(() => {
   stage = document.querySelector("#oml2d-stage");
-  homePage = document.querySelector(".VPHome");
-  if (!homePage) {
-    stage.style.zIndex = '-10';
+  if (!document.querySelector(".VPHome")) {
+    if(stage){
+      stage.style.zIndex = '-10';
+    }
     galaxy.style.zIndex = '-10';
+    if(document.querySelector('#closeButton')){
+      document.querySelector('#closeButton').style.zIndex = '0';
+    }
   } else {
-    stage.style.zIndex = '9998';
+    if(stage){
+      stage.style.zIndex = '9998';
+    }
     if(!document.querySelector('#universe')){
       document.querySelector('.VPHome').appendChild(galaxy)
       dark();
     }else{
       galaxy.style.zIndex = '0';
+    }
+    if(document.querySelector('#closeButton')){
+      document.querySelector('#closeButton').style.zIndex = '-2';
+      let hidden = false;
     }
   }
 });

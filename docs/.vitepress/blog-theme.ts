@@ -150,7 +150,7 @@ const blogTheme = getThemeConfig({
     category: 'Announcements',
     categoryId: 'DIC_kwDOMy-QGc4CijGz',
     inputPosition: 'bottom',
-  }
+  },
 })
 
 export { blogTheme }
