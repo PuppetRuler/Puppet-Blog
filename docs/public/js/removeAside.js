@@ -2,8 +2,9 @@ const removeButtonHTML = `
 <span id="closeButton"><i></i></span>
 `;
 
+let isMob = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // 电脑端代码
-if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+if (!isMob) {
   let b = document.createElement('div');
   b.innerHTML = removeButtonHTML;
   doc.body.appendChild(b.firstElementChild);
@@ -16,7 +17,6 @@ if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMo
   let VPLocalNav;
   let VPDoc;
   let VPContent;
-  let VPNavBar;
   let VPNavBarTitle;
   let asideElement;
   closeButton.addEventListener('click', function () {
