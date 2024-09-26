@@ -67,6 +67,9 @@ const observer = new MutationObserver(() => {
       stage.style.zIndex = '-10';
     }
     galaxy.style.zIndex = '-10';
+  document.querySelector('.VPLocalNav').classList.add('Doc_Transform');
+  document.querySelector('.VPContent').classList.add('Doc_Transform');
+  document.querySelector('.VPDoc').classList.add('Doc_Transform');
     if(document.querySelector('#closeButton')){
       document.querySelector('#closeButton').style.zIndex = '0';
     }

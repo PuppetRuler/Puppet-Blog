@@ -43,3 +43,9 @@ if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMo
     }
   });
 }
+
+document.querySelector('.title').addEventListener('onclick', () => {
+  document.querySelector('.VPLocalNav').classList.remove('Doc_Transform');
+  document.querySelector('.VPContent').classList.remove('Doc_Transform');
+  document.querySelector('.VPDoc').classList.remove('Doc_Transform');
+});
