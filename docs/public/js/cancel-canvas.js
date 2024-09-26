@@ -63,11 +63,8 @@ function dark() {
 const observer = new MutationObserver(() => {
   stage = document.querySelector("#oml2d-stage");
   if (!document.querySelector(".VPHome")) {
-    if (stage && document.querySelector('#oml2d-canvas') && document.querySelector('#oml2d-menus') && document.querySelector('#oml2d-tips')) {
-      stage.style.zIndex = '-10';
-      document.querySelector('#oml2d-canvas').zIndex = '-10'
-      document.querySelector('#oml2d-menus').zIndex = '-10'
-      document.querySelector('#oml2d-tips').zIndex = '-10'
+    if (stage) {
+      stage.classList.add('hiddenCanvas')
     }
     galaxy.style.zIndex = '-10';
     if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -80,11 +77,8 @@ const observer = new MutationObserver(() => {
       }
     }
   } else {
-    if (stage && document.querySelector('#oml2d-canvas') && document.querySelector('#oml2d-menus') && document.querySelector('#oml2d-tips')) {
-      stage.style.zIndex = '9998';
-      document.querySelector('#oml2d-canvas').zIndex = '9998'
-      document.querySelector('#oml2d-menus').zIndex = '9998'
-      document.querySelector('#oml2d-tips').zIndex = '9998'
+    if (stage) {
+      stage.classList.remove('hiddenCanvas')
     }
     if (!document.querySelector('#universe')) {
       document.querySelector('.VPHome').appendChild(galaxy);

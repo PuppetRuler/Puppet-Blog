@@ -64,6 +64,10 @@ canvas#universe {
   position: relative;
   z-index: 1;
 }
+.hiddenCanvas{
+  position: fixed !important;
+  left: -100% !important;
+}
 
 .Doc_Transform {
   transition: 0.5s ease-in-out;
