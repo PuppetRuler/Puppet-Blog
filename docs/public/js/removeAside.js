@@ -22,14 +22,14 @@ if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMo
     VPDoc = document.querySelector('.VPDoc');
     asideElement = document.querySelector('.VPSidebar');
     VPContent = document.querySelector('.VPContent');
-    if (asideElement.style.transform != 'translateX(-300px)') {
+    if (asideElement.style.transform != 'translateX(-100%)') {
       VPLocalNav.classList.remove('has-sidebar');
       VPContent.classList.remove('has-sidebar');
       VPDoc.classList.remove('has-sidebar');
       VPDoc.classList.remove('has-aside');
       // 隐藏 aside 元素
       if (asideElement) {
-        asideElement.style.transform = 'translateX(-300px)';
+        asideElement.style.transform = 'translateX(-100%)';
       }
     } else {
       VPLocalNav.classList.add('has-sidebar');
