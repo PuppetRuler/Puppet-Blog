@@ -89,8 +89,8 @@ const observer = new MutationObserver(() => {
     if (document.querySelector('#closeButton')) {
       document.querySelector('#closeButton').style.zIndex = '-2';
     }
-    if (document.querySelector('.VPNavBar')) {
-      document.querySelector('.VPNavBar').style.backgroundColor = 'transparent';
+    if( document.querySelector('.VPNavBar')){
+      document.querySelector('.VPNavBar').style.cssText = '';
     }
   }
 });
