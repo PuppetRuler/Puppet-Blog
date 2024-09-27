@@ -1,5 +1,6 @@
 /* 字体 */
 @import 'lxgw-wenkai-screen-webfont/style.css';
+
 .VPHome {
   // 定义遮罩样式
   background: radial-gradient(ellipse,
@@ -98,7 +99,7 @@ canvas#universe {
   z-index: 1;
 }
 
-.hiddenCanvas{
+.hiddenCanvas {
   left: -100% !important;
 }
 

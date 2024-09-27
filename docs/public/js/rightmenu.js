@@ -184,25 +184,24 @@ const images = [
 ];
 
 let currentIndex = 0;
-let vpHome = document.querySelector('.VPHome');
+let vpHome;
 const preloadedImages = [];
 
 // 预加载当前和下一张图片
 function preloadImages() {
   const img1 = new Image();
   img1.src = images[currentIndex];
-  console.log(img1.src);
   preloadedImages.push(img1);
 
   const nextIndex = (currentIndex + 1) % images.length;
   const img2 = new Image();
   img2.src = images[nextIndex];
   preloadedImages.push(img2);
-  console.log(img2.src);
 }
 
 // 更换背景图
 function changeBackground() {
+  vpHome = document.querySelector('.VPHome');
   if (vpHome) {
     vpHome.style.setProperty('--bg-image', `url(${images[currentIndex]})`);
     currentIndex = (currentIndex + 1) % images.length; // 循环索引
