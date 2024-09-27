@@ -50,8 +50,35 @@ pre {
   .clearTransition {
     transition: 0s;
   }
-  .nav-search-btn-wait{
+  .nav-search-btn-wait {
     transition: 0.25s !important;
+  }
+}
+
+@media screen and (min-width:1280px) {
+  .VPDoc {
+    &>.container {
+      width: 950px;
+      &>.content {
+        width: 70%;
+      }
+      &>.aside {
+        width: 30%;
+      }
+    }
+  }
+}
+@media screen and (min-width:1600px) {
+  .VPDoc {
+    &>.container {
+      width: 1100px;
+      &>.content {
+        width: 70%;
+      }
+      &>.aside {
+        width: 30%;
+      }
+    }
   }
 }
 
