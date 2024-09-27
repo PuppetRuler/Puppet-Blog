@@ -50,7 +50,7 @@ export default defineConfig({
     lastUpdatedText: '上次更新于',
 
     // 设置logo
-    logo: '/logo.webp',
+    logo: '/img/logo.webp',
     // editLink: {
     //   pattern:
     //     'https://github.com/ATQQ/sugar-blog/tree/master/packages/blogpress/:path',
