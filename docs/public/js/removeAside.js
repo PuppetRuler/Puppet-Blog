@@ -28,7 +28,7 @@ if (!isMob) {
     VPNavBarTitle = document.querySelector('.VPNavBarTitle');
     VPNavBar = document.querySelector('.VPNavBar');
     if (asideElement.style.transform != 'translateX(-100%)') {
-      VPNavBar.style.backgroundColor = 'var(--vp-c-bg)'
+      VPNavBar.style.backgroundColor = 'var(--vp-c-bg)';
       document.querySelector('.nav-search-btn-wait').style.opacity = 0;
       VPLocalNav.classList.remove('has-sidebar');
       VPContent.classList.remove('has-sidebar');
@@ -43,7 +43,7 @@ if (!isMob) {
         asideElement.style.transform = 'translateX(-100%)';
       }
     } else {
-      VPNavBar.style.backgroundColor = 'var(--vp-c-bg)'
+      VPNavBar.style.backgroundColor = 'var(--vp-c-bg)';
       document.querySelector('.nav-search-btn-wait').style.opacity = 0;
       VPLocalNav.classList.add('has-sidebar');
       VPContent.classList.add('has-sidebar');
@@ -53,7 +53,7 @@ if (!isMob) {
       VPDoc.classList.add('has-sidebar');
       setTimeout(() => {
         VPNavBar.classList.add('has-sidebar');
-        VPNavBar.style.backgroundColor = 'var(--vp-c-bg)'
+        VPNavBar.style.backgroundColor = 'var(--vp-c-bg)';
         document.querySelector('.nav-search-btn-wait').style.opacity = 1;
       }, 500);
       // 恢复 aside 元素位置
@@ -66,8 +66,8 @@ if (!isMob) {
 
 document.querySelector('.title').addEventListener('onclick', () => {
   if (document.querySelector('.VPLocalNav') && document.querySelector('.VPContent') && document.querySelector('.VPDoc')
-  .classList.remove('Doc_Transform') && document.querySelector('.VPNavBarTitle').classList.remove('Doc_Transform') && 
-  document.querySelector('.VPNavBar')) {
+    .classList.remove('Doc_Transform') && document.querySelector('.VPNavBarTitle').classList.remove('Doc_Transform') &&
+    document.querySelector('.VPNavBar')) {
     document.querySelector('.VPLocalNav').classList.remove('Doc_Transform');
     document.querySelector('.VPContent').classList.remove('Doc_Transform');
     document.querySelector('.VPDoc').classList.remove('Doc_Transform');

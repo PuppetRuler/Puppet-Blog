@@ -64,7 +64,7 @@ const observer = new MutationObserver(() => {
   stage = document.querySelector("#oml2d-stage");
   if (!document.querySelector(".VPHome")) {
     if (stage) {
-      stage.classList.add('hiddenCanvas')
+      stage.classList.add('hiddenCanvas');
     }
     galaxy.style.zIndex = '-10';
     if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -78,7 +78,7 @@ const observer = new MutationObserver(() => {
     }
   } else {
     if (stage) {
-      stage.classList.remove('hiddenCanvas')
+      stage.classList.remove('hiddenCanvas');
     }
     if (!document.querySelector('#universe')) {
       document.querySelector('.VPHome').appendChild(galaxy);
@@ -89,6 +89,7 @@ const observer = new MutationObserver(() => {
     if (document.querySelector('#closeButton')) {
       document.querySelector('#closeButton').style.zIndex = '-2';
     }
+    document.querySelector('.VPNavBar').style.backgroundColor = 'transparent';
   }
 });
 
