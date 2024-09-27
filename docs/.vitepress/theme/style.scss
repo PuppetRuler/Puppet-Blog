@@ -11,7 +11,7 @@
     // 自定义首页背景图
     &::before {
       // 背景图切换
-      background-image: var(--bg-image, url("https://fastly.jsdelivr.net/gh/PuppetRuler/drawing-board@main/images/1727145787406bg_p0.jpg"));
+      background-image: var(--bg-image, url('/img/bg.jpg'));
       /* 设置初始图片 */
       transition: background-image 0.6s;
       background-size: cover;
