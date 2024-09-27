@@ -19,23 +19,31 @@ if (!isMob) {
   let VPContent;
   let VPNavBarTitle;
   let asideElement;
+  let VPNavBar;
   closeButton.addEventListener('click', function () {
     VPLocalNav = document.querySelector('.VPLocalNav');
     VPDoc = document.querySelector('.VPDoc');
     asideElement = document.querySelector('.VPSidebar');
     VPContent = document.querySelector('.VPContent');
     VPNavBarTitle = document.querySelector('.VPNavBarTitle');
+    VPNavBar = document.querySelector('.VPNavBar');
     if (asideElement.style.transform != 'translateX(-100%)') {
+      document.querySelector('.search').style.opacity = 0;
       VPLocalNav.classList.remove('has-sidebar');
       VPContent.classList.remove('has-sidebar');
       VPDoc.classList.remove('has-sidebar');
       VPNavBarTitle.classList.remove('has-sidebar');
       VPDoc.classList.remove('has-aside');
       // 隐藏 aside 元素
+      setTimeout(() => {
+        VPNavBar.classList.remove('has-sidebar');
+        document.querySelector('.search').style.opacity = 1;
+      }, 500);
       if (asideElement) {
         asideElement.style.transform = 'translateX(-100%)';
       }
     } else {
+      document.querySelector('.search').style.opacity = 0;
       VPLocalNav.classList.add('has-sidebar');
       VPContent.classList.add('has-sidebar');
       setTimeout(() => {
@@ -43,6 +51,10 @@ if (!isMob) {
       }, 500);
       VPDoc.classList.add('has-sidebar');
       VPDoc.classList.add('has-aside');
+      setTimeout(() => {
+        VPNavBar.classList.add('has-sidebar');
+        document.querySelector('.search').style.opacity = 1;
+      }, 500);
       // 恢复 aside 元素位置
       if (asideElement) {
         asideElement.style.transform = 'translateX(0)';
