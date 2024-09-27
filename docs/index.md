@@ -4,7 +4,7 @@ layout: home
 blog:
   name: "Puppet's Blog"
   author: PuppetRuler
-  logo: /logo.jpg
+  logo: /logo.png
   motto: 个人主题博客
   inspiring:
     - 千万不要因为走得太久，而忘记了我们为什么出发
