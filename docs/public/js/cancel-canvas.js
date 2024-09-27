@@ -70,7 +70,6 @@ const observer = new MutationObserver(() => {
     if (!window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
       document.querySelector('.VPLocalNav').classList.add('Doc_Transform');
       document.querySelector('.VPContent').classList.add('Doc_Transform');
-      document.querySelector('.VPDoc').classList.add('Doc_Transform');
       document.querySelector('.VPNavBarTitle').classList.add('Doc_Transform');
       document.querySelector('.VPNavBar').classList.add('Doc_Transform');
       if (document.querySelector('#closeButton')) {

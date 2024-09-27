@@ -28,32 +28,33 @@ if (!isMob) {
     VPNavBarTitle = document.querySelector('.VPNavBarTitle');
     VPNavBar = document.querySelector('.VPNavBar');
     if (asideElement.style.transform != 'translateX(-100%)') {
-      document.querySelector('.search').style.opacity = 0;
+      VPNavBar.style.backgroundColor = 'var(--vp-c-bg)'
+      document.querySelector('.nav-search-btn-wait').style.opacity = 0;
       VPLocalNav.classList.remove('has-sidebar');
       VPContent.classList.remove('has-sidebar');
       VPDoc.classList.remove('has-sidebar');
       VPNavBarTitle.classList.remove('has-sidebar');
-      VPDoc.classList.remove('has-aside');
       // 隐藏 aside 元素
       setTimeout(() => {
         VPNavBar.classList.remove('has-sidebar');
-        document.querySelector('.search').style.opacity = 1;
+        document.querySelector('.nav-search-btn-wait').style.opacity = 1;
       }, 500);
       if (asideElement) {
         asideElement.style.transform = 'translateX(-100%)';
       }
     } else {
-      document.querySelector('.search').style.opacity = 0;
+      VPNavBar.style.backgroundColor = 'var(--vp-c-bg)'
+      document.querySelector('.nav-search-btn-wait').style.opacity = 0;
       VPLocalNav.classList.add('has-sidebar');
       VPContent.classList.add('has-sidebar');
       setTimeout(() => {
         VPNavBarTitle.classList.add('has-sidebar');
       }, 500);
       VPDoc.classList.add('has-sidebar');
-      VPDoc.classList.add('has-aside');
       setTimeout(() => {
         VPNavBar.classList.add('has-sidebar');
-        document.querySelector('.search').style.opacity = 1;
+        VPNavBar.style.backgroundColor = 'var(--vp-c-bg)'
+        document.querySelector('.nav-search-btn-wait').style.opacity = 1;
       }, 500);
       // 恢复 aside 元素位置
       if (asideElement) {
@@ -64,10 +65,13 @@ if (!isMob) {
 }
 
 document.querySelector('.title').addEventListener('onclick', () => {
-  if (document.querySelector('.VPLocalNav') && document.querySelector('.VPContent') && document.querySelector('.VPDoc').classList.remove('Doc_Transform') && document.querySelector('.VPNavBarTitle').classList.remove('Doc_Transform')) {
+  if (document.querySelector('.VPLocalNav') && document.querySelector('.VPContent') && document.querySelector('.VPDoc')
+  .classList.remove('Doc_Transform') && document.querySelector('.VPNavBarTitle').classList.remove('Doc_Transform') && 
+  document.querySelector('.VPNavBar')) {
     document.querySelector('.VPLocalNav').classList.remove('Doc_Transform');
     document.querySelector('.VPContent').classList.remove('Doc_Transform');
     document.querySelector('.VPDoc').classList.remove('Doc_Transform');
+    document.querySelector('.VPNavBar').classList.remove('Doc_Transform');
     document.querySelector('.VPNavBarTitle').classList.remove('Doc_Transform');
   }
 });
