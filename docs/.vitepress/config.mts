@@ -68,9 +68,27 @@ export default defineConfig({
       { text: 'Modern Design', link: '/Modern_Design/index.md' },
       { text: 'Android', link: '/Android/index.md' },
       { text: 'HarmonyOS', link: '/HarmonyOS/index.md' },
-      { text: '逆向学习', link: '/Reverse/index.md' },
-      { text: 'Java笔记', link: '/Java/index.md' },
-      { text: '工具使用篇', link: '/Tools/index.md' },
+      {
+        text: '逆向学习',
+        items: [
+          { text: '逆向技巧', link: '/Reverse/Skills/index.md' },
+          { text: '逆向工具', link: '/Reverse/Tools/index.md' }
+        ]
+      },
+      {
+        text: 'Java笔记',
+        items: [
+          { text: '笔记', link: '/Java/Notes/index.md' },
+        ]
+      },
+      {
+        text: '工具使用',
+        items: [
+          { text: '安卓工具', link: '/Tools/Android' },
+          { text: '电脑工具', link: '/Tools/PC' },
+          { text: 'Galgame工具', link: '/Tools/Galgame' },
+        ]
+      },
       { text: '杂谈', link: '/Chats/index.md' },
     ],
     socialLinks: [
