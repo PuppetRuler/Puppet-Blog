@@ -2,7 +2,7 @@ const removeButtonHTML = `
 <span id="closeButton"><i></i></span>
 `;
 
-let isMob = window.innerWidth <= 768 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+let isMob = window.innerWidth <= 960 || /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 // 电脑端代码
 if (!isMob) {
   let b = document.createElement('div');
