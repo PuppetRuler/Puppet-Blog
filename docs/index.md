@@ -19,3 +19,5 @@ blog:
     articles:
       title: ["博客文章", "月更新", "周更新"]
 ---
+
+<ImgBlur></ImgBlur>
