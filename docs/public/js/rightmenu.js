@@ -192,11 +192,6 @@ function preloadImages() {
   const img1 = new Image();
   img1.src = images[currentIndex];
   preloadedImages.push(img1);
-
-  const nextIndex = (currentIndex + 1) % images.length;
-  const img2 = new Image();
-  img2.src = images[nextIndex];
-  preloadedImages.push(img2);
 }
 
 // 更换背景图
