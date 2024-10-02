@@ -1,6 +1,7 @@
 ---
 title: JS的重点梳理(简略)
 description: 一点小小的对基础的回顾
+sticky: 996
 prev:
   text: 'Node'
   link: '/Front_End/Notes/Node'

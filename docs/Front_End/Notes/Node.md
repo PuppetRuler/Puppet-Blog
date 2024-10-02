@@ -1,6 +1,7 @@
 ---
 title: Node笔记
 description: 详细记录了Node的使用（含Express框架）
+sticky: 997
 prev:
   text: 'JavaScript'
   link: '/Front_End/Notes/JavaScript'
