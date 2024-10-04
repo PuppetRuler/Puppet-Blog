@@ -21,11 +21,7 @@ const style = `
 
 .dark-menu-list {
     list-style: none;
-    background: linear-gradient(
-        -45deg,
-        rgba(10, 20, 28, 0.2) 0%,
-        rgba(10, 20, 28, 0.7) 50%
-    );
+    background: var(--menu-bg-color);
     border: none;
     border-radius: 6px;
     backdrop-filter: blur(5px);
@@ -34,7 +30,7 @@ const style = `
     top: 100px;
     left: 100px;
     z-index: 999;
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08),
+    box-shadow: 0 0 0 1px var(--menu-divider-color),
                 0 2px 2px rgb(0 0 0 / 3%),
                 0 4px 4px rgb(0 0 0 / 4%),
                 0 10px 8px rgb(0 0 0 / 5%),
@@ -55,7 +51,7 @@ const style = `
     font-size: 14px;
     user-select: none;
     cursor: pointer;
-    color: #fff;
+    color: var(--vp-c-text-1);
 }
 
 .dark-menu-list li:not(.divider) span {
@@ -63,12 +59,12 @@ const style = `
 }
 
 .dark-menu-list li:not(.divider):hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--menu-divider-color);
 }
 
 .dark-menu-list li.divider {
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--menu-divider-color);
     user-select: none;
 }
 
@@ -141,8 +137,12 @@ if (!isMobile) {
     const { clientX, clientY } = e;
 
     darkMenuList.setAttribute('style', `--width: ${darkMenuList.scrollWidth}; --height: ${darkMenuList.scrollHeight}`);
+    if (clientX + parseInt(getComputedStyle(darkMenuList).width, 10) > window.innerWidth) {
+      darkMenuList.style.left = clientX - parseInt(getComputedStyle(darkMenuList).width, 10) + 'px';
+    } else {
+      darkMenuList.style.left = clientX + 'px';
+    }
     darkMenuList.style.top = clientY + 'px';
-    darkMenuList.style.left = clientX + 'px';
 
     darkMenuList.classList.add('menu-show');
     darkMenuItemList.forEach(li => {

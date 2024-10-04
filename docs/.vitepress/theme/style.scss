@@ -1,6 +1,15 @@
 /* 字体 */
 @import 'lxgw-wenkai-screen-webfont/style.css';
 
+.dark:root{
+  --menu-bg-color: linear-gradient(-45deg, rgba(10, 20, 28, 0.2) 0%, rgba(10, 20, 28, 0.7) 50%);
+  --menu-divider-color: rgba(255,255,255,0.1);
+}
+:root{
+  --menu-bg-color: rgba(246, 246, 247,0.4);
+  --menu-divider-color: rgba(0, 0, 0,0.1);
+}
+
 .VPHome {
   // 定义遮罩样式
   background: radial-gradient(ellipse,
