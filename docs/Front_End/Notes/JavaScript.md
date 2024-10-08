@@ -20,19 +20,18 @@ tags:
 
 ### 1.DOM对象
 
-document对象
-
-​    -document对象表示的是整个网页
-​    -document对象的原型链
-​        HTMLDocument - Document - Node - EventTarget - object.prototype - null
-​    -凡是在原型链上存在的对象的属性和方法都可以通过Document去调用
-​    -部分属性：
-​      document.documentElement->html根元素
-​      document.head->head元素
-​      document.title->title元素
-​      document.body->body元素
-​      document.links->获取页面中所有的超链接
-​      ...
+> document对象:
+>
+>  - document对象表示的是整个网页
+>  - document对象的原型链 HTMLDocument - Document - Node - EventTarget - object.prototype - null
+>  - 凡是在原型链上存在的对象的属性和方法都可以通过Document去调用
+>  - 部分属性：
+>   ​      document.documentElement->html根元素
+>   ​      document.head->head元素
+>   ​      document.title->title元素
+>   ​      document.body->body元素
+>   ​      document.links->获取页面中所有的超链接
+>   ​      ...
 
 ### 2.元素节点
 
