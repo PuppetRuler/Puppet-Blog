@@ -1,5 +1,5 @@
 /* 字体 */
-@import 'lxgw-wenkai-screen-webfont/style.css';
+@import "https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css";
 
 .dark:root{
   --menu-bg-color: linear-gradient(-45deg, rgba(10, 20, 28, 0.2) 0%, rgba(10, 20, 28, 0.7) 50%);
@@ -40,7 +40,7 @@ body,
 code,
 pre {
   /* Screen version */
-  font-family: "Menlo", "Fira Code", "Monaco", "Consolas", "LXGW WenKai Screen", sans-serif;
+  font-family: "Menlo", "Fira Code", "Monaco", "Consolas", "HarmonyOS_Regular", sans-serif;
 }
 body{
   font-size: 16px;
