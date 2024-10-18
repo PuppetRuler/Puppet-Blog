@@ -1,13 +1,13 @@
 /* 字体 */
 @import "https://s1.hdslb.com/bfs/static/jinkela/long/font/regular.css";
 
-.dark:root{
+.dark:root {
   --menu-bg-color: linear-gradient(-45deg, rgba(10, 20, 28, 0.2) 0%, rgba(10, 20, 28, 0.7) 50%);
-  --menu-divider-color: rgba(255,255,255,0.1);
+  --menu-divider-color: rgba(255, 255, 255, 0.1);
 }
-:root{
-  --menu-bg-color: rgba(246, 246, 247,0.4);
-  --menu-divider-color: rgba(0, 0, 0,0.1);
+:root {
+  --menu-bg-color: rgba(246, 246, 247, 0.4);
+  --menu-divider-color: rgba(0, 0, 0, 0.1);
 }
 
 .VPHome {
@@ -42,7 +42,7 @@ pre {
   /* Screen version */
   font-family: "Menlo", "Fira Code", "Monaco", "Consolas", "HarmonyOS_Regular", sans-serif;
 }
-body{
+body {
   font-size: 16px;
 }
 
@@ -205,7 +205,23 @@ div.iframe {
 }
 
 // 移动端点击处理
-*{
+* {
   -webkit-tap-highlight-color: transparent;
   tap-highlight-color: transparent;
+}
+
+@media (min-width: 960px) {
+  .VPDoc:not(.has-sidebar) .container {
+    max-width: 100% !important;
+    &>.content,
+    .content-container {
+      max-width: 1026px !important;
+    }
+
+  }
+}
+@media screen and (min-width: 1280px){
+  .VPDoc > .container {
+    width: 100% !important;
+  }
 }
