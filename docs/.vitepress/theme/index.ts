@@ -23,6 +23,10 @@ export default {
     app.component('Player', Player);
     const playerVNode = h(Player);
     // 将 VNode 渲染到指定的 DOM 容器中
-    render(playerVNode, document.body);
+    try {
+      render(playerVNode, document.body);
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
