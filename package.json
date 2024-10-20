@@ -12,8 +12,11 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@sugarat/theme": "^0.4.12",
+    "aplayer": "^1.10.1",
     "element-plus": "^2.7.2",
     "lxgw-wenkai-screen-webfont": "^1.7.0",
+    "pinia": "^2.2.4",
+    "pinia-plugin-persistedstate": "^3.2.3",
     "vue": "3.4.26"
   },
   "directories": {
