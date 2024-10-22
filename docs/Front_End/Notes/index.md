@@ -8,7 +8,6 @@ publish: false
   - [CSS3笔记](CSS3.md)
   - [Electron.md](Electron.md)
   - [HTML5基础笔记](HTML5.md)
-  - [前端笔记目录](index.md)
   - [JS的重点梳理(简略)](JavaScript.md)
   - [Node笔记](Node.md)
   - [手撕Promise](Promise.md)
