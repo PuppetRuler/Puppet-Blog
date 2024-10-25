@@ -1,6 +1,6 @@
 ---
 title: Java笔记
-hidden: true
+publish: false
 ---
 
 # Java笔记

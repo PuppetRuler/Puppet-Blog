@@ -1,6 +1,6 @@
 ---
 title: 逆向工具目录
-hidden: true
+publish: false
 ---
 
 # 逆向工具目录
