@@ -24,10 +24,10 @@
    */
   const getMusicList = async (id, server = "netease", type = "playlist") => {
     const result = await fetch(
-      //我的(能有免费的netease)
+      // 我的(能有免费的netease)
       // `https://metingjsapi.vercel.app/api?server=${server}&type=${type}&id=${id}`,
       // 官方(仅netease)
-      // `http://localhost:3000/api?server=${server}&type=${type}&id=${id}`,
+      // `https://api-meting.example.com/?server=${server}&type=${type}&id=${id}`,
       // anzhiyu接口(能用qq)
       // `https://meting.qjqq.cn/?server=${server}&type=${type}&id=${id}`,
       // 圆弧派接口(netease 有VIP)
