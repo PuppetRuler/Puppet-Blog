@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
-    "@sugarat/theme": "^0.5.0",
+    "@sugarat/theme": "^0.5.1",
     "aplayer": "^1.10.1",
     "element-plus": "^2.7.2",
     "lxgw-wenkai-screen-webfont": "^1.7.0",
@@ -27,7 +27,7 @@
     "pagefind": "^1.1.0",
     "sass": "^1.76.0",
     "typescript": "^5.4.5",
-    "vitepress": "1.4.1"
+    "vitepress": "1.4.5"
   },
   "pnpm": {
     "peerDependencyRules": {
