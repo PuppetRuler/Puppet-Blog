@@ -189,21 +189,6 @@ canvas#universe {
   margin-right: 4px;
 }
 
-// 视频
-div.iframe {
-  position: relative;
-  width: 100%;
-  height: 0px;
-  padding-bottom: 56.25%;
-  &>iframe {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%
-  }
-}
-
 @media (min-width: 960px) {
   .VPDoc:not(.has-sidebar) .container {
     max-width: 100% !important;
